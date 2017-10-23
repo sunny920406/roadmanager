@@ -32,17 +32,17 @@ public class Application extends SpringBootServletInitializer {
         return builder.sources(Application.class);
     }
 
-    @Bean
-    public ServletListenerRegistrationBean bootstrapListener(){
-        ServletListenerRegistrationBean registrationBean = new ServletListenerRegistrationBean<>();
-        registrationBean.setListener(new BootstrapListener());
-        registrationBean.setOrder(1);
-        return registrationBean;
-    }
-
-    @Bean
-    public ServletRegistrationBean servletRegistrationBean() {
-        return new ServletRegistrationBean(new DispatcherServlet(), "/*");
-    }
+//    @Bean
+//    public ServletListenerRegistrationBean bootstrapListener(){
+//        ServletListenerRegistrationBean registrationBean = new ServletListenerRegistrationBean<>();
+//        registrationBean.setListener(new BootstrapListener());
+//        registrationBean.setOrder(1);
+//        return registrationBean;
+//    }
+//
+//    @Bean
+//    public ServletRegistrationBean servletRegistrationBean() {
+//        return new ServletRegistrationBean(new DispatcherServlet(), "/*");
+//    }
 
 }
