@@ -15,12 +15,12 @@
     <!-- 暴露服务 -->
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}"  />
 
-    <!--<dubbo:protocol name="rest" server="servlet" contextpath="${dubbo.application.name}" port="${dubbo.rest.port}"/>-->
+    <dubbo:protocol name="rest" server="servlet" contextpath="${dubbo.application.name}" port="${dubbo.rest.port}"/>
 
     <dubbo:service interface="com.ly.dc.road.api.RoadManager" ref="roadManagerImpl" version="1.0.0" timeout="4000"
                    cluster="failover" retries="1" validation="true" />
 
-    <!--<dubbo:service interface="com.ly.dc.road.api.RoadManager" ref="roadManagerImpl" protocol="rest"-->
-                   <!--timeout="4000"-->
-                   <!--validation="true" version="1.0.0" retries="1" connections="50"/>-->
+    <dubbo:service interface="com.ly.dc.road.api.RoadManager" ref="roadManagerImpl" protocol="rest"
+                   timeout="4000"
+                   validation="true" version="1.0.0" retries="1" connections="50"/>
 </beans>

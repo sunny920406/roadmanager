@@ -30,6 +30,7 @@
         <netty.version>3.7.0.Final</netty.version>
         <resteasy.version>3.0.7.Final</resteasy.version>
         <javassist_version>3.15.0-GA</javassist_version>
+        <validation-api.version>1.1.0.Final</validation-api.version>
     </properties>
 
     <dependencyManagement>
@@ -148,6 +149,18 @@
                         <groupId>org.jboss.resteasy</groupId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jaxb-provider</artifactId>
+                <version>${resteasy.version}</version>
             </dependency>
 
         </dependencies>

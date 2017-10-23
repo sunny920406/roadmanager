@@ -13,12 +13,12 @@ import javax.ws.rs.core.MediaType;
 import java.awt.*;
 import java.util.List;
 
-//@Path("/api")
-//@Consumes({MediaType.APPLICATION_JSON})
-//@Produces({ContentType.APPLICATION_JSON_UTF_8, ContentType.TEXT_XML_UTF_8})
+@Path("/api")
+@Consumes({MediaType.APPLICATION_JSON})
+@Produces({ContentType.APPLICATION_JSON_UTF_8, ContentType.TEXT_XML_UTF_8})
 public interface RoadManager {
-//    @GET
-//    @Path("/heighway")
-//    @Deprecated
+    @GET
+    @Path("/heighway")
+    @Deprecated
     List<HeighWayVo> GetHeighWays();
 }
